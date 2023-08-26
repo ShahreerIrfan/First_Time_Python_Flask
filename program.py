@@ -37,6 +37,7 @@ cat = Cat(name="Whiskers", breed="Siamese")
 # Describing the animals
 describe_animal(dog)
 describe_animal(cat)
+# ...
 
 # Adding another Animal for variety
 generic_animal = Animal(name="Shadow", species="Horse")
