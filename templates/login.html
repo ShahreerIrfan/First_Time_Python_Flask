@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 2em;
+        }
+
+        .login-container .input-group {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .login-container .input-group input {
+            width: 100%;
+            padding: 10px;
+            background: none;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            color: #333;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .login-container .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            font-size: 16px;
+            color: #333;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .login-container .input-group input:focus ~ label,
+        .login-container .input-group input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #9b59b6;
+            font-size: 12px;
+        }
+
+        .login-container input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 25px;
+            background: #9b59b6;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-container input[type="submit"]:hover {
+            background-color: #71b7e6;
+        }
+
+        .login-container .forgot-pass {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .login-container .forgot-pass:hover {
+            color: #9b59b6;
+        }
+
+        .login-container .sign-up {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .login-container .sign-up a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+        .login-container .sign-up a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <div class="input-group">
+                <input type="text" id="username" name="username" required>
+                <label for="username">Username</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            <input type="submit" value="Login">
+            <a href="#" class="forgot-pass">Forgot Password?</a>
+            <div class="sign-up">
+                Don't have an account? <a href="#">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
